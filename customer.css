@@ -1,0 +1,41 @@
+/* General styling for the customer page */
+body.customer-page {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('cus_img.jpg'); /* Background image for the page */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the page header */
+h1 {
+    color: #333;
+}
+
+/* Styling for the "Order Now" button */
+#orderNowButton {
+    padding: 10px 20px;
+    background-color: #ff8800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#orderNowButton:hover {
+    background-color: #ff5500;
+}
+
+/* Styling for the clock */
+#clock {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #555;
+}
