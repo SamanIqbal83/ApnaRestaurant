@@ -1,0 +1,198 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('res_imag.jpeg'); 
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-color: #000; 
+    height: 100vh; 
+    width: 100vw; 
+    overflow: hidden;
+}
+
+/* Adjusting the text overlay (login container) */
+.login-container {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for text readability */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8px);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+
+/* Background Animation */
+.background-animation {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    animation: float 15s infinite;
+}
+
+.circle:nth-child(1) {
+    width: 150px;
+    height: 150px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.circle:nth-child(2) {
+    width: 200px;
+    height: 200px;
+    top: 40%;
+    right: 15%;
+    animation-delay: -5s;
+}
+
+.circle:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    bottom: 20%;
+    left: 20%;
+    animation-delay: -10s;
+}
+
+/* Login Container */
+.login-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8px);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Header */
+h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #1e3c72;
+    text-decoration: underline;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    bottom: -10px;
+    left: 25%;
+    background: linear-gradient(to right, #4CAF50, #45a049);
+    border-radius: 2px;
+}
+
+/* Form Elements */
+input {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border: 2px solid #e1e1e1;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+    outline: none;
+}
+
+input::placeholder {
+    color: #999;
+    transition: all 0.3s ease;
+}
+
+input:focus::placeholder {
+    opacity: 0.5;
+    transform: translateX(10px);
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+button:hover::before {
+    left: 100%;
+}
+
+/* Error Message */
+#loginError {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(255, 0, 0, 0.1);
+    animation: shake 0.5s ease-in-out;
+}
