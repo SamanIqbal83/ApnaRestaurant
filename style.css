@@ -1,0 +1,112 @@
+/* 🌟 بنیادی سیٹنگز */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+    padding: 20px;
+}
+
+/* 🌟 ہیڈر */
+h2 {
+    color: #4B0082;
+    margin-bottom: 20px;
+}
+
+/* 🌟 کنٹینر */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 🌟 ٹیبل ڈیزائن */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #6A0DAD;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+/* 🌟 بٹن اور لنکس */
+a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    background: #6A0DAD;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+a:hover {
+    background: #8A2BE2;
+}
+
+.btn-danger {
+    background: #ff4b5c;
+}
+
+.btn-danger:hover {
+    background: #ff1f3d;
+}
+
+/* 🌟 فارم */
+form {
+    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background: #6A0DAD;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #8A2BE2;
+}
+
+/* 🌟 لاگ آؤٹ سیکشن */
+.logout-section {
+    margin-top: 20px;
+}
